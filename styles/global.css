@@ -42,6 +42,7 @@
 body, html {
   background-color: var(--shape-bg);
   font-family: 'raleway', sans-serif;
+  color: var(--text-body);
   font-weight: 700;
   line-height: auto;
   max-width: 100%;
@@ -49,12 +50,19 @@ body, html {
   
 }
 
-section {
+.container {
+  max-width: 1120px;
   margin-inline: auto;
+}
+
+
+h1, h2, h3 {
+  color: var(--text-title);
 }
 
 h1 {
   font-size: 3rem;
+  line-height: 1;
 }
 
 h2 {

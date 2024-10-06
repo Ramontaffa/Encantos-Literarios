@@ -18,7 +18,7 @@ header > div::before {
   height: 948px;
   background: url('../assets/hero-background.png') no-repeat center/cover;
   opacity: 0;
-  animation: opacity 2s ease-in-out forwards;
+  animation: opacity 2s 100ms ease-in-out forwards;
   z-index: -1;
 }
 
@@ -27,9 +27,77 @@ header nav{
   justify-content: space-between;
   align-items: center;
   margin-inline: auto;
-
-  max-width: 1120px;
+  
   padding-top: 3.75rem ;
+}
+
+& .button {
+  position: relative;
+  border: none;
+  padding: .75rem 1.25rem;
+  border-radius: .5rem;
+  background: var(--pink-dark);
+  font: var(--button);
+  color: var(--text-title);
+  cursor: pointer;
+  overflow: hidden;
+  
+  & span {
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+& .button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--pink-base);
+  clip-path: circle(0%);
+  z-index: 0;
+  transition: 600ms;
+  }
+& .button:hover::after {
+  clip-path: circle(100%);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  margin-top: 10rem;
+  max-width: 656px;
+  gap: 2rem;
+
+  h1{
+    opacity: 0;
+    animation: opacity 3s 0.8s forwards;
+  }
+
+  p{
+    display: inline-block;
+    max-width: 540px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: var(--lh-body);
+    color: var(--text-label);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    opacity: 0;
+    animation: opacity 3s 1.4s forwards;
+  }
 }
 
 @keyframes opacity {
