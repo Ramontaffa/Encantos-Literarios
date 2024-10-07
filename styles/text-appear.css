@@ -2,10 +2,84 @@
   position: relative;
   display: flex;
   margin-top: 2rem;
-
+  
   @media (width >= 80em) {
     height: 25rem;
     margin-block: 5rem 5rem;  
+
+    &:hover {
+      & img {
+        opacity: 1;
+        transform: scale(1); 
+  
+        &[src*="spellbook"] {
+          transition-delay: 0.1s;
+          &:hover {
+            transform: rotate(10deg);
+          }
+        }
+        &[src*="planchette"] {
+          transition-delay: 1s;
+          &:hover {
+            transform: rotate(10deg);
+            transition-delay: 0.2s;
+          }
+        }
+        &[src*="crys"] {
+          transition-delay: 1.9s;
+          &:hover {
+            transform: rotate(-10deg);
+            transition-delay: 0.2s;
+          }
+        }
+      }
+  
+      & > div span {
+        opacity: 1;
+  
+        &:nth-child(1) {
+          transition-delay: 0s;
+  
+          & strong {
+            transition-delay: 0s;
+          }
+        }
+        &:nth-child(2) {
+          transition-delay: 0.9s;
+  
+          & strong {
+            transition-delay: 0.9s;
+          }
+        }
+        &:nth-child(3) {
+          transition-delay: 1.8s;
+  
+          & strong {
+            transition-delay: 1.8s;
+          }
+        }
+  
+      }
+  
+      & > div strong {
+        color: var(--blue-base);
+      }
+    }
+  
+    &:not(:hover) {
+      & img {
+        opacity: 0;
+        transform: scale(0);
+      }
+  
+      & > div span {
+        opacity: 0.4;
+      }
+  
+      & > div strong {
+        color: var(--text-label);
+      }
+    }
   }
 
   &::before {
@@ -32,30 +106,55 @@
   }
 
   & img {
-    display: flex;
     position: absolute;
-    opacity: 0;
-    transform: scale(0); 
-    transition: opacity 1s ease, transform 1s ease;
+    display: flex;
 
     &[src*="crys"] {
-      width: 5rem;
-      bottom: 4.7rem;
-      right: 1.9rem;
-      rotate: -14deg;
+      width: 2.5rem;
+      bottom: 3rem;
+      right: 1rem;
+      rotate: 15deg;
     }
     &[src*="spellbook"] {
-      width: 5rem;
-      top: 1rem;
-      right: 48%;
+      width: 2.5rem;
+      top: 2.6rem;
+      right: 3.5rem;
       rotate: 20deg;
     }
     &[src*="planchette"] {
-      width: 5rem;
-      bottom: 4rem;
-      left: 5rem;
-      rotate: 99deg;
+      width: 2rem;
+      bottom: 3.3rem;
+      left: 2rem;
+      rotate: -50deg;
     }
+
+    @media (width >= 80em) {
+      opacity: 0;
+      transform: scale(0); 
+      transition: opacity 1s ease, transform 1s ease;
+
+      &[src*="crys"] {
+        width: 5rem;
+        bottom: 4.7rem;
+        right: 1.9rem;
+        rotate: -14deg;
+      }
+
+      &[src*="spellbook"] {
+        width: 5rem;
+        top: 1rem;
+        right: 48%;
+        rotate: 20deg;
+      }
+
+      &[src*="planchette"] {
+        width: 5rem;
+        bottom: 4rem;
+        left: 5rem;
+        rotate: 99deg;
+      }
+    }
+
   }
 
   & > div {
@@ -73,95 +172,22 @@
       font-size: 1rem;
       font-weight: 400;
       line-height: 200%;
-      opacity: 0.4;
       transition: opacity 1s ease;
-
+      
       @media (width >= 80em) {
         font-size: 2rem;
+        opacity: 0.4;
       }
     }
 
     strong {
-      font-weight: 700;
       line-height: 200%;
-      color: var(--text-label);
-      transition: color 1s ease;
-    }
-  }
-  
-
-  &:hover {
-    & img {
-      opacity: 1;
-      transform: scale(1); 
-
-      &[src*="spellbook"] {
-        transition-delay: 0.1s;
-        &:hover {
-          transform: rotate(10deg);
-        }
+      font-weight: 500;
+      color: var(--text-body);
+      @media (width >= 80em) {
+        font-weight: 700;
+        transition: color 1s ease;
       }
-      &[src*="planchette"] {
-        transition-delay: 1s;
-        &:hover {
-          transform: rotate(10deg);
-          transition-delay: 0.2s;
-        }
-      }
-      &[src*="crys"] {
-        transition-delay: 1.9s;
-        &:hover {
-          transform: rotate(-10deg);
-          transition-delay: 0.2s;
-        }
-      }
-    }
-
-    & > div span {
-      opacity: 1;
-
-      &:nth-child(1) {
-        transition-delay: 0s;
-
-        & strong {
-          transition-delay: 0s;
-        }
-      }
-      &:nth-child(2) {
-        transition-delay: 0.9s;
-
-        & strong {
-          transition-delay: 0.9s;
-        }
-      }
-      &:nth-child(3) {
-        transition-delay: 1.8s;
-
-        & strong {
-          transition-delay: 1.8s;
-        }
-      }
-
-    }
-
-    & > div strong {
-      color: var(--blue-base);
-    }
-  }
-
-
-  &:not(:hover) {
-    & img {
-      opacity: 0;
-      transform: scale(0);
-    }
-
-    & > div span {
-      opacity: 0.4;
-    }
-
-    & > div strong {
-      color: var(--text-label);
     }
   }
 }
