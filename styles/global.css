@@ -47,11 +47,10 @@ body, html {
   line-height: auto;
   max-width: 100%;
   overflow-x: hidden;
-  
 }
 
 .container {
-  max-width: 1120px;
+  max-width: calc(100% - 15rem);
   margin-inline: auto;
 }
 
