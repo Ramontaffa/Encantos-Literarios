@@ -1,3 +1,146 @@
 .month {
-  display: none;
+  text-align: center;
+  position: relative;
+  padding-top: 5.5rem;
+  height: 60vh;
+
+  @media (width >= 80em) {
+    height: 140vh; /* teste*/
+  }
+
+  & header {
+    img {
+      width: 3rem ;
+
+      @media (width >= 80em) {
+        width: 5rem;
+      }
+    }
+
+    & div {
+      justify-content: center;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 0.5rem;
+
+      @media (width >= 80em) {
+        gap: 1rem;
+      }
+    }
+  }
+
+  .book-month {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  
+    & img {
+      object-fit: cover;
+      margin-top: 6.5rem;
+    }
+  
+    & img:not([src*="book-main"]), span {
+      position: absolute;
+      z-index: 0; 
+    }
+  
+    & [src*="book-main"] {
+      position: absolute;
+      width: 157px;
+      opacity: 0.5; /* mudar*/
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0rem;
+      z-index: 2;
+      @media (width >= 80em) {
+        width: 467px;
+        top: -.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  
+    & [src*="yellow"] {
+      position: absolute;
+      width: 4rem;
+      transform: rotate(11deg);
+      top: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media (width >= 80em) {
+        width: 172px;
+        top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  
+    & [src*="purple"] {
+      position: absolute;
+      width: 4rem;
+      transform: rotate(22deg);
+      top: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1; 
+
+      @media (width >= 80em) {
+        width: 172px;
+        top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & [src*=broche] {
+      position: absolute;
+      width: 4rem;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media (width >= 80em) {
+        width: 172px;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & [src*="Vector"] {
+      position: absolute;
+      width: 4rem;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media (width >= 80em) {
+        width: 172px;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & span {
+      position: absolute;
+      width: 4rem;
+      top: 13rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media (width >= 80em) {
+        width: 172px;
+        top: 18rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  
 }
