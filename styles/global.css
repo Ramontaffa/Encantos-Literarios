@@ -50,8 +50,12 @@ body, html {
 }
 
 .container {
-  max-width: calc(100% - 15rem);
+  max-width: calc(100% - 10%);
   margin-inline: auto;
+  
+  @media (width >= 80em) {
+    max-width: calc(100% - 15rem);
+  }
 }
 
 
@@ -60,16 +64,27 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 1.75rem;
+
+  @media (width >= 80em) {
+    font-size: 3rem;
+  }
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  @media (width >= 80em) {
+    font-size: 2rem;
+  }
 }
 
 h3 {
   font-size: 1rem;
+
+  @media (width >= 80em) {
+    font-size: 1.5rem;
+  }
 }
 
 a {
