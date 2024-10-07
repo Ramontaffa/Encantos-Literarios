@@ -5,12 +5,35 @@
   height: 25rem;
   margin-block: 5rem 5rem;  
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 350px;
+    border-radius: 50%;
+    right: -20rem;
+    bottom: 16rem;
+    filter: blur(200px);
+    background-color: var(--pink-low);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    left: 11rem;
+    bottom: -1rem;
+    filter: blur(320px);
+    background-color: var(--pink-low);
+  }
+
   & img {
     display: flex;
     position: absolute;
-    opacity: 0; /* Inicialmente invisível */
-    transform: scale(0); /* Usar transform para escalar */
-    transition: opacity 1s ease, transform 1s ease; /* Transições para imagens */
+    opacity: 0;
+    transform: scale(0); 
+    transition: opacity 1s ease, transform 1s ease;
 
     &[src*="crys"] {
       width: 5rem;
@@ -50,7 +73,7 @@
       font-weight: 700;
       line-height: 200%;
       color: var(--text-label);
-      transition: color 1s ease; /* Transição para mudar a cor suavemente */
+      transition: color 1s ease;
     }
   }
 
@@ -60,20 +83,20 @@
       transform: scale(1); 
 
       &[src*="spellbook"] {
-        transition-delay: 0.5s;
+        transition-delay: 0.1s;
         &:hover {
           transform: rotate(10deg);
         }
       }
       &[src*="planchette"] {
-        transition-delay: 1.4s;
+        transition-delay: 1s;
         &:hover {
           transform: rotate(10deg);
           transition-delay: 0.2s;
         }
       }
       &[src*="crys"] {
-        transition-delay: 2.3s;
+        transition-delay: 1.9s;
         &:hover {
           transform: rotate(-10deg);
           transition-delay: 0.2s;
@@ -85,24 +108,24 @@
       opacity: 1;
 
       &:nth-child(1) {
-        transition-delay: 0.5s;
+        transition-delay: 0s;
 
         & strong {
-          transition-delay: 0.5s;
+          transition-delay: 0s;
         }
       }
       &:nth-child(2) {
-        transition-delay: 1.2s;
+        transition-delay: 0.9s;
 
         & strong {
-          transition-delay: 1.2s;
+          transition-delay: 0.9s;
         }
       }
       &:nth-child(3) {
-        transition-delay: 2.1s;
+        transition-delay: 1.8s;
 
         & strong {
-          transition-delay: 2.1s;
+          transition-delay: 1.8s;
         }
       }
 
