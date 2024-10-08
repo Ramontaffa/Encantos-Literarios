@@ -97,11 +97,12 @@
   &::after {
     content: "";
     position: absolute;
-    width: 340px;
-    height: 300px;
-    left: 11rem;
-    bottom: 3rem;
-    filter: blur(320px);
+    width: 30%;
+    height: 30%;
+    left: 20%;
+    transform: translate(-20%);
+    bottom: 5rem;
+    filter: blur(150px);
     background-color: var(--pink-low);
   }
 
