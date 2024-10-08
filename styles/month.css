@@ -3,6 +3,7 @@
   position: relative;
   padding-top: 5.5rem;
   height: 60vh;
+  border: solid red;
 
   @media (width >= 80em) {
     height: 140vh; /* teste*/
@@ -33,6 +34,23 @@
     position: relative;
     display: flex;
     justify-content: center;
+    border: solid;
+    height: 44vh;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--pink-low);
+      filter: blur(110px);
+      width: 17rem;
+      height: 17rem;
+      bottom: 5rem;
+      left: 11rem;
+      z-index: 0;
+    }
+    
+    @media (width >= 80em) {
+      height: 88%;
+    }
   
     & img {
       object-fit: cover;
@@ -51,7 +69,7 @@
       left: 50%;
       transform: translateX(-50%);
       top: 0rem;
-      z-index: 2;
+      z-index: 10;
       @media (width >= 80em) {
         width: 467px;
         top: -.5rem;
@@ -63,11 +81,10 @@
     & [src*="yellow"] {
       position: absolute;
       width: 4rem;
-      transform: rotate(11deg);
-      top: 0.5rem;
+      top: .8rem;
       left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
+      transform: translate(119%) rotate(11deg);
+      z-index: 2;
 
       @media (width >= 80em) {
         width: 172px;
@@ -81,10 +98,10 @@
       position: absolute;
       width: 4rem;
       transform: rotate(22deg);
-      top: 0.5rem;
+      top: 4.1vh;
       left: 50%;
-      transform: translateX(-50%);
-      z-index: 1; 
+      transform: translate(155%) rotate(22deg);
+      z-index: -1; 
 
       @media (width >= 80em) {
         width: 172px;
@@ -97,9 +114,9 @@
     & [src*=broche] {
       position: absolute;
       width: 4rem;
-      top: 1rem;
+      top: 11.5rem;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-190%) rotate(-8deg);
       z-index: 1;
 
       @media (width >= 80em) {
@@ -110,12 +127,12 @@
       }
     }
 
-    & [src*="Vector"] {
+    & [src*="Vector-isolado"] {
       position: absolute;
       width: 4rem;
-      top: 1rem;
+      top: -.575rem;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-217%) rotate(0deg);
       z-index: 1;
 
       @media (width >= 80em) {
@@ -125,17 +142,77 @@
         transform: translateX(-50%);
       }
     }
-
-    & span {
+    & [src*="Vector-bookmark"] {
       position: absolute;
       width: 4rem;
       top: 13rem;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(140%) rotate(0deg);
       z-index: 1;
 
       @media (width >= 80em) {
         width: 172px;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    & [src*="Vector-broche"] {
+      position: absolute;
+      width: 2.5rem;
+      top: 9.5rem;
+      left: 50%;
+      transform: translate(-385%) rotate(-10deg);
+      z-index: 1;
+
+      @media (width >= 80em) {
+        width: 172px;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & span:nth-child(8) {
+      position: absolute;
+      font: 400 10px/100% 'raleway', sans-serif;
+      width: 12rem;
+      top: 24rem;
+      left: 50%;
+      transform: translate(0%) rotate(0deg);
+
+      @media (width >= 80em) {
+        width: 12rem;
+        top: 18rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    & span:nth-child(9) {
+      position: absolute;
+      font: 400 10px/100% 'raleway', sans-serif;
+      width: 12rem;
+      top: 14.75rem;
+      left: 50%;
+      transform: translate(-123%) rotate(0deg);
+
+      @media (width >= 80em) {
+        width: 12rem;
+        top: 18rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    & span:nth-child(10) {
+      position: absolute;
+      font: 400 10px/100% 'raleway', sans-serif;
+      width: 12rem;
+      top: 4.6rem;
+      left: 50%;
+      transform: translate(-114%) rotate(0deg);
+
+      @media (width >= 80em) {
+        width: 12rem;
         top: 18rem;
         left: 50%;
         transform: translateX(-50%);
