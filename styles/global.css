@@ -97,3 +97,7 @@ a {
   text-decoration: none;
   color: var(--text-title);
 }
+
+ul[role="list"] {
+  list-style: none;
+}

@@ -2,7 +2,8 @@
   text-align: center;
   position: relative;
   padding-top: 5.5rem;
-  height: 80vh;
+  height: 40rem;
+  border: solid;
 
   
 
@@ -174,7 +175,6 @@
         left: 50%;
         transform: translateX(-50%);
       }
-  
       & [src*="yellow"] {
         width: 172px;
         top: 6rem;
@@ -182,7 +182,6 @@
         transform: translate(20%) rotate(0deg);
         transition: transform 500ms ease;
       }
-  
       & [src*="purple"] {
         width: 172px;
         top: 5.5rem;
@@ -190,7 +189,6 @@
         transform: translate(15%) rotate(0deg);
         transition: transform 500ms ease, rotate 500ms ease;
       }
-  
       & [src*=broche] {
         width: 222px;
         top: 18rem;
@@ -206,7 +204,6 @@
         transform: translate(-50%) rotate(0deg);
         transition: transform 500ms;
       }
-  
       & [src*="Vector-bookmark"] {
         width: 145px;
         top: 17rem;
@@ -214,7 +211,6 @@
         transform: translateX(25%);
         transition: transform 500ms ease;
       }
-  
       & [src*="Vector-broche"] {
         width: 105px;
         top: 24rem;
@@ -222,7 +218,7 @@
         transform: translateX(-50%);
         transition: transform 500ms ease;
       }
-  
+
       & span:nth-child(8) {
         width: 12rem;
         font: 400 1rem/140% 'raleway', sans-serif;
@@ -230,8 +226,7 @@
         left: 50%;
         transform: translateX(-80%);
         transition: transform 500ms ease;
-      }
-  
+      }  
       & span:nth-child(9) {
         font: 400 1rem/140% 'raleway', sans-serif;
         width: 12rem;
@@ -240,7 +235,6 @@
         transform: translateX(-50%);
         transition: transform 550ms ease;
       }
-  
       & span:nth-child(10) {
         font: 400 1rem/140% 'raleway', sans-serif;
         width: 12rem;
@@ -254,11 +248,9 @@
         & [src*="yellow"] {
           transform: translate(12.5rem, -7rem) rotate(11deg);
         }
-  
         & [src*="purple"] {
           transform: translate(17rem, -1rem) rotate(25deg);
         }
-  
         & [src*=broche] {
           transform: translate(-21.9rem, 5rem);
         }
@@ -266,12 +258,10 @@
         & [src*="Vector-isolado"] {
           transform: translate(-22.5rem, -20rem);
         }
-
         & [src*="Vector-broche"] {
           transition-delay: 40ms;
           transform: translate(-24rem, -6rem);
         }
-
         & [src*="Vector-bookmark"] {
           transform: translate(14rem, 15.5rem);
         }
@@ -279,11 +269,9 @@
         & span:nth-child(8) {
           transform: translate(-29rem, -11.5rem);
         }
-  
         & span:nth-child(9) {
           transform: translate(-26.7rem, 1.5rem);
         }
-  
         & span:nth-child(10) {
           transform: translate(10.2rem, 13.2rem);
         }
