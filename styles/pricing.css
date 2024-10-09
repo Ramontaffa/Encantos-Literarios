@@ -56,6 +56,7 @@
 
         & p {
           text-align: left;
+          font-weight: 700;
         }
       }
 
@@ -78,6 +79,7 @@
             display: flex;
             font: 400 10px/140% 'raleway', sans-serif;
             align-items: center;
+            margin-left: 0.5rem;
             img {
               width: 1.8rem;
               margin-right: .25rem;
@@ -86,7 +88,7 @@
         }
   
         & #p-card {
-          background-color: var(--blue-light);
+          background-color: var(--blue-dark);
           border-radius: 8px;
           width: 100%;
           height: 40px;
@@ -138,6 +140,119 @@
        & ul{
         margin-top: 3.8rem;
        }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  .pricing {
+    border: solid;
+    height: 65rem;
+
+    .card-wrapper{
+      position: relative;
+      border: solid;
+      height: 50rem;
+
+
+      .card {
+        position: absolute;
+        width: 288px;
+        height: 28rem;
+        top: 6rem;
+        left: 50%;
+        transform: translate(-150%);
+        z-index: 1;
+        padding: 1.75rem;
+        border: 1px solid var(--blue-light);
+
+        & .header-card {
+          padding: unset;
+
+          & h3 {
+            font-size: 1rem;
+          }
+        }
+
+        & .card-info {
+          & ul {
+            margin-top: 6.4rem;
+          }
+
+          & #p-card {
+            padding-block: .5rem;
+          }
+        }
+      }
+
+      .card:nth-child(2) {
+        border: unset;
+        position: absolute;
+        width: 288px;
+        height: 28rem;
+        top: 6rem;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 2;
+        background-color: var(--shape-hover);
+
+        & #bunny {
+          position: absolute;
+          width: 3rem;
+          top: -3.35rem;
+          left: 50%;
+          transform: translate(-175%);
+          z-index: 1;
+        }
+
+        & .header-card {
+          gap: 4.5rem;
+
+          & h3 {
+            font-size: 1rem;
+          }
+          & p {
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            background-color: var(--shape-stroke);
+          }
+        }
+
+        & .card-info {
+          & ul {
+            margin-top: 5.32rem;
+          }
+
+          & #p-card {
+            padding-block: .5rem;
+          }
+        }
+      }
+
+      .card:nth-child(3) {
+        position: absolute;
+        width: 288px;
+        height: 28rem;
+        top: 6rem;
+        left: 50%;
+        transform: translate(50%);
+        z-index: 1;
+        padding: 1.75rem;
+
+        & .header-card {
+          padding: unset;
+        }
+
+        & .card-info {
+          & ul {
+            margin-top: 3.2rem;
+          }
+
+          & #p-card {
+            padding-block: .5rem;
+          }
+        }
+      }
     }
   }
 }
