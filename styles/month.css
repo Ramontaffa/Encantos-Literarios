@@ -2,10 +2,7 @@
   text-align: center;
   position: relative;
   padding-top: 5.5rem;
-  height: 40rem;
-  border: solid;
-
-  
+  height: 40rem;  
 
   & header {
     img {
