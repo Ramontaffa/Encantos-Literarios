@@ -19,14 +19,14 @@
           }
         }
         &[src*="planchette"] {
-          transition-delay: 1s;
+          transition-delay: 0.9s;
           &:hover {
             transform: rotate(10deg);
             transition-delay: 0.2s;
           }
         }
         &[src*="crys"] {
-          transition-delay: 1.9s;
+          transition-delay: 1.55s;
           &:hover {
             transform: rotate(-10deg);
             transition-delay: 0.2s;
@@ -45,17 +45,17 @@
           }
         }
         &:nth-child(2) {
-          transition-delay: 0.9s;
+          transition-delay: 0.7s;
   
           & strong {
-            transition-delay: 0.9s;
+            transition-delay: 0.7s;
           }
         }
         &:nth-child(3) {
-          transition-delay: 1.8s;
+          transition-delay: 1.4s;
   
           & strong {
-            transition-delay: 1.8s;
+            transition-delay: 1.4s;
           }
         }
   
