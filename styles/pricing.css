@@ -14,6 +14,7 @@
   }
 
   .card-wrapper {
+    border: solid;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -24,6 +25,7 @@
     margin-top: 3rem;
     flex-shrink: 0;
     width: 100%;
+    height: 100%;
 
     &::-webkit-scrollbar {
       display: none;
@@ -146,26 +148,67 @@
 
 @media (width >= 80em) {
   .pricing {
-    border: solid;
     height: 65rem;
+    margin-top: 15rem;
+    background-image: url(../assets/pricing-background.png);
+    background-size: cover;
+    z-index: 1;
 
+    & header {
+      z-index: 1;
+    }
+
+    
     .card-wrapper{
       position: relative;
-      border: solid;
       height: 50rem;
+      width: 100vw;
+      display: flex;
+      overflow: visible;
+      margin-left: calc(-50vw + 50%);
 
+      &::before {
+        content: '';
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        top: 4rem;
+        left: 50%;
+        transform: translate(-50%);
+        filter: blur(120px);
+        background-color: var(--shape-base);
+        z-index: 0;
+      }
 
       .card {
         position: absolute;
-        width: 288px;
+        width: 300px;
         height: 28rem;
         top: 6rem;
         left: 50%;
-        transform: translate(-150%);
+        transform: translate(-50%);
         z-index: 1;
         padding: 1.75rem;
-        border: 1px solid var(--blue-light);
+        border-radius: 30px;
+        border: unset;
+        transition: all 600ms ease;
 
+        & #star-card {
+          position: absolute;
+          width: 2.25rem;
+          top: 0.4rem;
+          left: 50%;
+          transform: rotate(8deg);
+          transition: transform 600ms ease, top 900ms ease;
+        }
+        & #star-card-2 {
+          position: absolute;
+          width: .875rem;
+          left: 10%;
+          transform: rotate(8deg);
+          transition: transform 600ms ease;
+        }
+        
         & .header-card {
           padding: unset;
 
@@ -188,7 +231,7 @@
       .card:nth-child(2) {
         border: unset;
         position: absolute;
-        width: 288px;
+        width: 300px;
         height: 28rem;
         top: 6rem;
         left: 50%;
@@ -231,13 +274,30 @@
 
       .card:nth-child(3) {
         position: absolute;
-        width: 288px;
+        width: 300px;
         height: 28rem;
         top: 6rem;
         left: 50%;
-        transform: translate(50%);
+        transform: translate(-50%);
         z-index: 1;
         padding: 1.75rem;
+
+        & #star-card-3 {
+          position: absolute;
+          width: 1.5rem;
+          top: 24.4rem;
+          left: 80%;
+          transform: rotate(8deg);
+          transition: transform 600ms ease, top 900ms ease;
+        }
+        & #star-card-4 {
+          position: absolute;
+          width: .8rem;
+          top: 26.4rem;
+          left: 70%;
+          transform: rotate(8deg);
+          transition: transform 600ms ease, top 900ms ease;
+        }
 
         & .header-card {
           padding: unset;
@@ -250,6 +310,90 @@
 
           & #p-card {
             padding-block: .5rem;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .card-wrapper {
+        
+        .card:nth-child(1) {
+          transform: translate(-150%) rotate(-7deg);
+          top: 10rem;
+
+          &:hover {
+            z-index: 3;
+            top: 9.6rem;
+            scale: 1.01;
+            padding-block: 1.45rem 2rem;
+            box-shadow: -1px 1px 25px var(--blue-light), 0 6px 20px rgba(0, 0, 0, 0.1);
+            background-color: var(--shape-hover);
+
+            #star-card {
+              top: -2.5rem;
+              transform: translate(-525%) rotate(-11deg);
+            }
+
+            #star-card-2 {
+              top: 1rem;
+              transform: translate(-525%) rotate(13deg);
+            }
+          }
+
+          #star-card {
+            top: -2.5rem;
+            transform: translate(-525%);
+          }
+
+          #star-card-2 {
+            top: 1rem;
+            transform: translate(-525%);
+          }
+        }
+
+        .card:nth-child(2) {
+          &:hover {
+            z-index: 3;
+            background-color: var(--shape-hover);
+            top: 5.2rem;
+            scale: 1.01;
+            padding-block: 1.42rem 2rem;
+            box-shadow: -1px 1px 25px var(--pink-base), 0 6px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          &:not(:hover) {
+            background-color: var(--shape-base);
+          }
+        }
+
+        .card:nth-child(3) {
+          transform: translate(49%) rotate(6deg);
+          top: 9.5rem;
+
+          & #star-card-3 {
+            top: 28rem;
+            transform: translate(360%);
+          }
+          & #star-card-4 {
+            top: 29.8rem;
+            transform: translate(450%);
+          }
+
+          &:hover {
+            z-index: 3;
+            top: 9.4rem;
+            scale: 1.01;
+            padding-block: 1.38rem 2rem;
+            box-shadow: -1px 1px 25px var(--blue-light), 0 6px 20px rgba(0, 0, 0, 0.1);
+             background-color: var(--shape-hover);
+
+            #star-card-3 {
+              transform: translate(360%) rotate(-13deg);
+            }
+            #star-card-4 {
+              transform: translate(450%) rotate(16deg);
+            }
           }
         }
       }
