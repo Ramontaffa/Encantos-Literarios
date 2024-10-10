@@ -10,7 +10,6 @@ footer {
   height: auto;
 
   & header {
-    border: solid;
     margin-inline: auto;
     text-align: center;
 
@@ -36,8 +35,7 @@ footer {
   & .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: solid;
-    height: 20rem;
+    padding-bottom: 2.25rem;
     padding-top: 2.5rem;
     
     & p{
@@ -47,9 +45,64 @@ footer {
     }
     & span {
       display: block;
-      font: 600 12px/auto 'raleway', sans-serif;
+      font: 600 12px/140% 'raleway', sans-serif;
       color: var(--blue-light);
       margin-block: .75rem;
+    }
+  }
+}
+
+@media (width >= 80em) {
+  footer {
+    background-size: contain;
+    display: inline-flex;
+    border: solid red;
+    justify-content: space-between;
+    gap: 15rem;
+    padding-block: 10rem 6.375rem;
+
+    & header {
+      width: 16.5rem;
+      & img:nth-child(1){
+        width: 100%;
+      }
+
+      & .social-links {
+        display: flex;
+        gap: .5rem;
+
+        & img {
+          aspect-ratio: 1/1;
+          transition: 400ms ease;
+        }
+
+        & img:hover {
+          background-color: var(--blue-light);
+          
+        }
+      }
+    }
+
+    & .content-grid {
+      display: grid;
+      padding-top: unset;
+      padding-bottom: unset;
+      gap: 3.5rem;
+
+      & p {
+        padding-bottom: .5rem;
+      }
+
+      & span {
+        font-size: 14px;
+        margin-block: 1rem;
+      }
+
+      span:hover {
+        cursor: pointer;
+        color: var(--text-body);
+      }
+
     }
   }
 }
