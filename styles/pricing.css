@@ -13,12 +13,12 @@
     padding-top: 6.5rem;
   }
 
-  .card-wrapper {
+  & .card-wrapper {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    overflow-x: auto;
+    overflow-x: scroll;
     text-align: center;
     gap: 1.5rem;
     margin-top: 3rem;

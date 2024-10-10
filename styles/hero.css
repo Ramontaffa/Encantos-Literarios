@@ -62,7 +62,7 @@
 & .button {
   position: relative;
   border: none;
-  padding: .75rem 1.25rem;
+  padding: .75rem 1.5rem;
   border-radius: .5rem;
   background: var(--pink-dark);
   font: var(--button);
@@ -74,6 +74,7 @@
     font-size: 14px;
     position: relative;
     z-index: 1;
+    font-weight: 700;
   }
 }
 
