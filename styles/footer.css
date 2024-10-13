@@ -2,6 +2,7 @@ footer {
   background-image: url(../assets/book-trace-background.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   object-fit: cover;
 
   margin-top: 7rem;
